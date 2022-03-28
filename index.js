@@ -15,5 +15,4 @@ bot.on("ready", async() => {
     })
 })
  
-
 bot.login(token)
