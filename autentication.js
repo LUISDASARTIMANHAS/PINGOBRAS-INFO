@@ -9,15 +9,15 @@ console.log(password.value)
 function entrar(){
     
   let msgError = document.getElementById("msgError")
-    
-  if( password.value === key.senha){
+  alert('Verificando!...')
+  if( password.value === key.senha) {
     window.location.href = "https://codepen.io/luisdasartimanhas/full/ZEaVByy"
     
     let mathRandom = Math.random().toString(16).substr(2)
     let token = mathRandom + mathRandom
     
-    localStorage.setItem('token', token)}
-  
+    localStorage.setItem('token', token)
+  }
   else {
     password.setAttribute('style', 'color: red')
     password.setAttribute('style', 'border-color: red')
