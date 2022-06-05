@@ -13,11 +13,34 @@
     <div class="site-altura">
       <div class="conteudo" role="main">
         
+        <div id="msgError">Esta faltando a senha!</div>
+        <div id="msgSuccess"></div>
+        <p class="text-autentication">Digite A Senha Do Administrador</p>
+        
+        <input class="input-autentication" 
+               type="password" 
+               id="senha" 
+               placeholder="senha 123456..." 
+               required/> 
+        
+        <br>
+        <button 
+                class="btn-enviar-autentication"
+                type="submit"
+                onclick="entrar()">ENVIAR</button> 
+      
+        <button
+                class="btnReload"
+                onclick="refresh()">
+          <img            
+    src="https://cdn.glitch.global/b39d6a4a-0e14-4b41-930d-29d3ccd6c137/pngwing.com.png?v=1651355832699"
+               height="100%"/></button>
+        
       </div></div>
 </body>
 
-<link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/btn.css" />
-    <script src="js/script.js" defer></script>
+<link rel="stylesheet" href="https://pingobras.glitch.me/css/style.css" />
+  <link rel="stylesheet" href="https://pingobras.glitch.me/css/btn.css" />
+    <script src="https://pingobras.glitch.me/js/script.js" defer></script>
   <script src="autentication.js" defer></script>
 </html>

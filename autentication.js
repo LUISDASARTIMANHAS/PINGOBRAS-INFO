@@ -1,6 +1,3 @@
-function continuar() {
-window.location.href ="https://pingobras-autentication.glitch.me/autentication=user=true.html";
-}
 
 let  JsonKeys = localStorage.getItem("JsonKeys");
 let key = JSON.parse(JsonKeys);
@@ -33,6 +30,6 @@ function entrar(){
 function refresh(){
   const adminKey = {senha: 2004};
 const CryptoKey = JSON.stringify(adminKey);
-localStorage.setItem("JsonKeys", CryptoKey);
+localStorage.pingobras.glitch.me.setItem("JsonKeys", CryptoKey);
 alert('O banco de dados foi restaurado!')
 }
