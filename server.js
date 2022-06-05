@@ -19,7 +19,7 @@ const fastify = require("fastify")({
 
 // Setup our static files
 fastify.register(require("fastify-static"), {
-  root: path.join(__dirname, "public"),
+  root: path.join(__dirname, ""),
   prefix: "/" // optional: default '/'
 });
 
@@ -108,7 +108,7 @@ fastify.post("/", async (request, reply) => {
   // Return the info to the client
   request.query.raw
     ? reply.send(params)
-    : reply.view("index.html", params);
+    : reply.view("pingobras.glitch.me", params);
 });
 
 /**
@@ -161,7 +161,7 @@ fastify.post("/reset", async (request, reply) => {
     // Temos uma chave válida e podemos limpar o log
     params.optionHistory = await db.clearHistory();
     params.true = "senha correta";
-
+     window.location.href = ("https://google.com");
     // Verifique se há erros - o método retornaria um valor falso
     params.error = params.optionHistory ? null : data.errorMessage;
   }
@@ -171,7 +171,7 @@ fastify.post("/reset", async (request, reply) => {
   // Envie um código de status não autorizado se as credenciais do usuário falharem
   request.query.raw
     ? reply.status(status).send(params)
-    : reply.status(status).view("/src/pages/admin.hbs", params);
+    : reply.status(status).view("index.html", params);
 });
 
 // Execute o servidor e relate para os logs
