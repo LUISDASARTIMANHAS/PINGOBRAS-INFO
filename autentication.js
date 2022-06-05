@@ -28,7 +28,7 @@ function entrar(){
 }
 
 function refresh(){
-  const adminKey = {senha: 2004};
+  const adminKey = {senha: 9645};
 const CryptoKey = JSON.stringify(adminKey);
 localStorage.setItem("JsonKeys", CryptoKey);
 alert('O banco de dados foi restaurado!')
