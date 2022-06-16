@@ -2,6 +2,8 @@
 let  JsonKeys = localStorage.getItem("JsonKeys");
 let key = JSON.parse(JsonKeys);
 console.log(key.senha);
+let tokenjs = localStorage.getItem("JsonToken");
+let tokenR = JSON.parse(tokenjs);
 
 
 let inputsenha = document.getElementById("senha")
