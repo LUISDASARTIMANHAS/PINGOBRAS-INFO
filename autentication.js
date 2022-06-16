@@ -2,6 +2,8 @@
 let  JsonKeys = localStorage.getItem("JsonKeys");
 let key = JSON.parse(JsonKeys);
 console.log(key.senha);
+let tokenR = localStorage.getItem("token");
+console.log(tokenR);
 
 let inputsenha = document.getElementById("senha")
 console.log(inputsenha.value)
@@ -9,9 +11,8 @@ console.log(inputsenha.value)
 let msgError = document.getElementById("msgError");
 let msgSuccess = document.getElementById("msgSuccess");
 let userID = document.getElementById("userID");
-let  tokenJson = localStorage.getItem("token");
-let token = JSON.parse(JsonKeys);
- userID.innerHTML = token ;
+
+ userID.innerHTML = tokenR;
 
 
 
