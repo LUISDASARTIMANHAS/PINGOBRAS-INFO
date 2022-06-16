@@ -1,7 +1,7 @@
-const tokenR = localStorage.getItem("token");
-console.log(tokenR);
+let tokenStorage = localStorage.getItem("JsonToken");
+console.log(tokenStorage);
 console.log("token requerida!");
 
 let userID = document.getElementById("userID");
 
- userID.innerHTML = tokenR;
+ userID.innerHTML = tokenStorage;

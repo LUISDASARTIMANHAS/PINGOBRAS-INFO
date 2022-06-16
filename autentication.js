@@ -22,7 +22,7 @@ enviar.addEventListener("click", function entrar() {
     
 const Cryptotoken = JSON.stringify(token);
 console.log("codificando token");
-localStorage.setItem("token", Cryptotoken);
+localStorage.setItem("JsonToken", Cryptotoken);
 console.log("token redefinido");
     
     msgSuccess.setAttribute('style', 'display: block')
