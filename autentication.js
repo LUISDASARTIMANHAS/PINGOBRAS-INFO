@@ -20,7 +20,7 @@ var enviar = document.querySelector("#submit");
 enviar.addEventListener("click", function entrar() {  
   alert('Verificando!...');
    if(inputsenha.value == key.senha) {
-    window.location.href = "https://codepen.io/luisdasartimanhas/full/ZEaVByy"
+    window.location.href = "https://pingobras.glitch.me"
     let mathRandom = Math.random().toString(16).substr(2)
     let token = mathRandom + mathRandom
     localStorage.setItem('token', token)
