@@ -3,14 +3,14 @@ let  JsonKeys = localStorage.getItem("JsonKeys");
 let key = JSON.parse(JsonKeys);
 console.log(key.senha);
 
-let password = document.getElementById("senha")
-console.log(password.value)
+let inputsenha = document.getElementById("senha")
+console.log(inputsenha.value)
 
 function entrar(){
     
   let msgError = document.getElementById("msgError")
   alert('Verificando!...')
-  if( password.value === key.senha) {
+  if(inputsenha.value == key.senha) {
     window.location.href = "https://codepen.io/luisdasartimanhas/full/ZEaVByy"
     
     let mathRandom = Math.random().toString(16).substr(2)
@@ -18,13 +18,11 @@ function entrar(){
     
     localStorage.setItem('token', token)
   }
-  else {
-    password.setAttribute('style', 'color: red')
-    password.setAttribute('style', 'border-color: red')
+  else{
+    inputsenha.setAttribute('style', 'color: red')
+    inputsenha.setAttribute('style', 'border-color: red')
     msgError.setAttribute('style', 'display: block')
-    msgError.innerHTML = 'Usuário ou senha incorretos'
-   
-  }
+    msgError.innerHTML = 'Usuário ou senha incorretos'}
 }
 
 function refresh(){
