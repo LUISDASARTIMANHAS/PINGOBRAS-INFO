@@ -6,10 +6,14 @@ console.log(key.senha);
 let inputsenha = document.getElementById("senha")
 console.log(inputsenha.value)
 
+let msgError = document.getElementById("msgError");
+
 var enviar = document.querySelector("#submit");
 enviar.addEventListener("click", function entrar() {  
-  let msgError = document.getElementById("msgError")
-  alert('Verificando!...')
+
+  
+  alert('Verificando!...');
+  
   if(inputsenha.value == key.senha) {
     window.location.href = "https://codepen.io/luisdasartimanhas/full/ZEaVByy"
     
@@ -22,7 +26,7 @@ enviar.addEventListener("click", function entrar() {
     inputsenha.setAttribute('style', 'color: red')
     inputsenha.setAttribute('style', 'border-color: red')
     msgError.setAttribute('style', 'display: block')
-    msgError.innerHTML = 'Usuário ou senha incorretos'}
+    msgError.innerHTML = 'senha incorreta!'}
 });
 
 function refresh(){
