@@ -19,7 +19,11 @@ enviar.addEventListener("click", function entrar() {
     window.location.href = "https://pingobras.glitch.me"
     let mathRandom = Math.random().toString(16).substr(2)
     let token = mathRandom + mathRandom
-    localStorage.setItem('token', token)
+    
+const Cryptotoken = JSON.stringify(token);
+console.log("codificando token");
+localStorage.setItem("token", Cryptotoken);
+console.log("token redefinido");
     
     msgSuccess.setAttribute('style', 'display: block')
     msgSuccess.innerHTML = 'senha correta! redirecionando!'
