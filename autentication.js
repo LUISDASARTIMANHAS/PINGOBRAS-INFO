@@ -18,9 +18,9 @@ enviar.addEventListener("click", function entrar() {
    if(inputsenha.value == key.senha) {
     window.location.href = "https://pingobras.glitch.me"
     let mathRandom = Math.random().toString(16).substr(2)
-    let token = mathRandom + mathRandom
+    let storageToken = {token:"mathRandom"};
     
-const Cryptotoken = JSON.stringify(token);
+const Cryptotoken = JSON.stringify(storageToken);
 console.log("codificando token");
 localStorage.setItem("JsonToken", Cryptotoken);
 console.log("token redefinido");
